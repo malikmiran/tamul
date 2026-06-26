@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" style="scroll-padding-top: 5rem;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Psychologist</title>
+    <title>Tammana Ajaz Bhat | Trainee Counsellor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons for modern, crisp iconography -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,49 +13,69 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6', // Teal
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            900: '#134e4a',
+                            50: '#f4f6f4',
+                            100: '#e4e8e4',
+                            200: '#cbd4cc',
+                            300: '#a7b7a9',
+                            400: '#809683',
+                            500: '#627a65', // Sage
+                            600: '#4d6050',
+                            700: '#3f4f42',
+                            800: '#344036',
+                            900: '#2b352d',
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['Outfit', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                        'glow': '0 0 20px rgba(98, 122, 101, 0.15)',
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
         
-        /* Custom styles for dark form inputs to remove default white browser backgrounds on date/time pickers */
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Custom styles for dark form inputs */
         ::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            opacity: 0.7;
+            filter: invert(1) sepia(10%) saturate(200%) hue-rotate(70deg) opacity(0.7);
             cursor: pointer;
+        }
+
+        /* Subtle ambient animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary-100 selection:text-primary-900">
+<body class="bg-[#FCFBF8] text-stone-800 antialiased selection:bg-primary-100 selection:text-primary-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+    <nav class="fixed w-full bg-[#FCFBF8]/80 backdrop-blur-lg z-50 border-b border-stone-200/60">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-xl font-bold text-slate-900 tracking-tight">Tammana Ajaz Bhat</a>
+                    <a href="#" class="text-2xl font-serif font-bold text-stone-900 tracking-tight">T.A.B</a>
                 </div>
-                <div class="hidden sm:flex space-x-8">
-                    <a href="#about" class="text-slate-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#research" class="text-slate-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium">Research & Publications</a>
-                    <a href="#contact" class="text-slate-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium">Contact</a>
+                <div class="hidden sm:flex space-x-10">
+                    <a href="#about" class="text-stone-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium tracking-wide">About</a>
+                    <a href="#research" class="text-stone-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium tracking-wide">Research & Publications</a>
+                    <a href="#contact" class="text-stone-600 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium tracking-wide">Contact</a>
                 </div>
                 <div class="flex items-center">
-                    <a href="#contact" class="inline-flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
+                    <a href="#contact" class="inline-flex items-center px-5 py-2.5 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all hover:shadow-md">
                         <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> Book Session
                     </a>
                 </div>
@@ -64,47 +84,64 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto">
-            <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6">
+    <header class="relative pt-40 pb-28 sm:pt-48 sm:pb-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+        <!-- Aesthetic Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[30rem] h-[30rem] bg-primary-100/50 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[25rem] h-[25rem] bg-orange-50/60 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+
+        <div class="text-center max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl font-bold text-stone-900 sm:text-6xl md:text-7xl mb-6 tracking-tight leading-tight">
                 <span class="block">Tammana Ajaz Bhat</span>
-                <span class="block text-primary-600 text-3xl sm:text-4xl md:text-5xl mt-2">Psychologist</span>
+                <span class="block text-primary-600 text-4xl sm:text-5xl md:text-6xl mt-4 italic font-normal">Trainee Counsellor</span>
             </h1>
-            <p class="mt-3 max-w-md mx-auto text-base text-slate-500 sm:text-lg md:mt-5 md:text-xl md:max-w-2xl mb-8">
+            <p class="mt-6 max-w-2xl mx-auto text-lg text-stone-600 sm:text-xl md:mt-8 leading-relaxed font-light">
                 Dedicated to advancing mental health through evidence-based clinical practice and rigorous psychological research. Providing compassionate care and insightful sociocultural perspectives.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#contact" class="w-full sm:w-auto inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 shadow-md transition-all hover:-translate-y-0.5">
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-5">
+                <a href="#contact" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 shadow-md transition-all hover:-translate-y-0.5 hover:shadow-glow">
                     <i data-lucide="calendar-check" class="w-5 h-5 mr-2"></i> Schedule Appointment
                 </a>
-                <a href="#research" class="w-full sm:w-auto inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-full text-slate-700 bg-white hover:bg-slate-50 shadow-sm transition-all hover:-translate-y-0.5">
+                <a href="#research" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3.5 border border-stone-200 text-base font-medium rounded-full text-stone-700 bg-white/50 backdrop-blur-sm hover:bg-white shadow-sm transition-all hover:-translate-y-0.5">
                     View Research
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- About Section (Brief) -->
-    <section id="about" class="py-16 bg-white border-y border-slate-200">
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative border-y border-stone-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:flex lg:items-center lg:justify-between">
-                <div class="lg:w-1/2 pr-8">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Professional Approach</h2>
-                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                        As a dedicated psychologist, I integrate clinical insights with ongoing research to provide the highest standard of care. My work spans from direct patient interaction—focusing on therapeutic mechanisms and individualized interventions—to broader academic research examining sociocultural impacts on mental health.
-                    </p>
-                    <p class="text-lg text-slate-600 leading-relaxed">
-                        Therapy is a collaborative process. We will work together to understand your unique challenges and build actionable strategies for your well-being.
-                    </p>
-                </div>
-                <div class="mt-10 lg:mt-0 lg:w-5/12 bg-primary-50 rounded-2xl p-8 border border-primary-100 flex flex-col items-center justify-center text-center">
-                    <div class="bg-white p-4 rounded-full shadow-sm mb-4 text-primary-600">
-                        <i data-lucide="wallet" class="w-10 h-10"></i>
+            <div class="lg:flex lg:items-center lg:justify-between gap-16">
+                <div class="lg:w-7/12">
+                    <div class="inline-flex items-center space-x-2 mb-6">
+                        <span class="h-px w-8 bg-primary-500"></span>
+                        <span class="text-primary-600 font-medium uppercase tracking-widest text-xs">Approach</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Session Details</h3>
-                    <p class="text-slate-600 mb-4">Accepting new clients for individual consultation and therapy.</p>
-                    <div class="inline-flex items-center px-4 py-2 bg-white rounded-full border border-primary-200 text-primary-800 font-bold shadow-sm">
-                        <span class="text-xl mr-1">₹1,000</span> / hour
+                    <h2 class="text-4xl font-bold text-stone-900 mb-6 leading-tight">Creating a safe space for growth and healing</h2>
+                    <div class="prose prose-stone prose-lg text-stone-600 space-y-6 font-light">
+                        <p>
+                            As a dedicated trainee counsellor, I integrate clinical insights with ongoing research to provide the highest standard of care. My work spans from direct patient interaction—focusing on therapeutic mechanisms and individualized interventions—to broader academic research examining sociocultural impacts on mental health.
+                        </p>
+                        <p>
+                            Therapy is a collaborative process. We will work together to understand your unique challenges, honor your experiences, and build actionable strategies for your profound well-being.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:w-5/12">
+                    <div class="bg-gradient-to-br from-[#FCFBF8] to-primary-50 rounded-3xl p-10 border border-stone-200/60 shadow-soft animate-float text-center relative overflow-hidden">
+                        <!-- Decorative top right corner -->
+                        <div class="absolute -top-10 -right-10 w-20 h-20 bg-primary-200 rounded-full blur-2xl opacity-50"></div>
+                        
+                        <div class="bg-white/80 backdrop-blur w-16 h-16 mx-auto rounded-2xl shadow-sm mb-6 text-primary-600 flex items-center justify-center border border-primary-100">
+                            <i data-lucide="flower-2" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-stone-900 mb-3">Session Details</h3>
+                        <p class="text-stone-600 mb-8 font-light">Accepting new clients for individual consultation and supportive therapy.</p>
+                        
+                        <div class="inline-flex items-center px-6 py-3 bg-white rounded-2xl border border-stone-100 text-primary-800 shadow-sm">
+                            <span class="text-2xl font-serif mr-2 font-bold">₹1,000</span> 
+                            <span class="text-stone-400 font-light">/ hour</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,69 +149,70 @@
     </section>
 
     <!-- Research & Publications Section -->
-    <section id="research" class="py-20 bg-slate-50">
+    <section id="research" class="py-24 bg-[#FCFBF8]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Research & Publications</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">A collection of academic articles, studies, and contributions to the field of psychology.</p>
+                <div class="inline-flex items-center space-x-2 mb-4">
+                    <span class="h-px w-8 bg-primary-500"></span>
+                    <span class="text-primary-600 font-medium uppercase tracking-widest text-xs">Contributions</span>
+                    <span class="h-px w-8 bg-primary-500"></span>
+                </div>
+                <h2 class="text-4xl font-bold text-stone-900 mb-4">Research & Publications</h2>
+                <p class="mt-4 text-lg text-stone-600 max-w-2xl mx-auto font-light">Academic articles, studies, and contributions advancing the field of psychology and therapy.</p>
             </div>
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 
                 <!-- Publication Card 1 -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col hover:shadow-md transition-shadow relative">
-                    <div class="mb-4">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                            Observational Study
+                <article class="bg-white rounded-3xl shadow-sm border border-stone-100 p-8 flex flex-col hover:shadow-soft transition-all duration-300 group">
+                    <div class="mb-6 flex items-center">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 tracking-wide uppercase">
+                            <i data-lucide="eye" class="w-3 h-3 mr-1.5"></i> Observational
                         </span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug">
+                    <h3 class="text-xl font-bold text-stone-900 mb-4 leading-snug group-hover:text-primary-600 transition-colors">
                         A 100-Hour Observational Study on Treatment-Resistant Schizophrenia: Clinical and Sociocultural Insights from Kashmir
                     </h3>
-                    <div class="mt-auto pt-6">
-                        <a href="https://www.mathewsopenaccess.com/full-text/a-100-hour-observational-study-on-treatment-resistant-schizophrenia-clinical-and-sociocultural-insights-from-kashmir#:~:text=Insights%20from%20Kashmir-,Tamana%20A%20Bhat,-1%2C*%2C%20Yasir%20Rather2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 group">
+                    <div class="mt-auto pt-8">
+                        <a href="https://www.mathewsopenaccess.com/full-text/a-100-hour-observational-study-on-treatment-resistant-schizophrenia-clinical-and-sociocultural-insights-from-kashmir" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                             Read Full Text 
-                            <i data-lucide="arrow-right" class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </article>
 
                 <!-- Publication Card 2 -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col hover:shadow-md transition-shadow">
-                    <div class="mb-4">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                            Case Report
+                <article class="bg-white rounded-3xl shadow-sm border border-stone-100 p-8 flex flex-col hover:shadow-soft transition-all duration-300 group">
+                    <div class="mb-6 flex items-center">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 tracking-wide uppercase">
+                            <i data-lucide="file-text" class="w-3 h-3 mr-1.5"></i> Case Report
                         </span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug">
+                    <h3 class="text-xl font-bold text-stone-900 mb-4 leading-snug group-hover:text-primary-600 transition-colors">
                         Delayed Treatment Initiation in Early-Onset Schizophrenia: A Case Demonstrating the Role of CBTp Following Pharmacological Stabilization
                     </h3>
-                    <div class="mt-auto pt-6">
-                        <a href="https://www.mathewsopenaccess.com/journals/case-reports/abstract/delayed-treatment-initiation-in-early-onset-schizophrenia-a-case-demonstrating-the-role-of-cbtp-following-pharmacological-stabilization#:~:text=Following%20Pharmacological%20Stabilization-,Tamana%20A%20Bhat,-*%2C%20Dr.%20Rakesh%20Kumar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 group">
+                    <div class="mt-auto pt-8">
+                        <a href="https://www.mathewsopenaccess.com/journals/case-reports/abstract/delayed-treatment-initiation-in-early-onset-schizophrenia-a-case-demonstrating-the-role-of-cbtp-following-pharmacological-stabilization" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                             Read Abstract 
-                            <i data-lucide="arrow-right" class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </article>
 
                 <!-- Publication Card 3 -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col hover:shadow-md transition-shadow lg:col-span-1 md:col-span-2">
-                    <div class="mb-4">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                            Journal Article
+                <article class="bg-white rounded-3xl shadow-sm border border-stone-100 p-8 flex flex-col hover:shadow-soft transition-all duration-300 group lg:col-span-1 md:col-span-2">
+                    <div class="mb-6 flex items-center">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 tracking-wide uppercase">
+                            <i data-lucide="book-open" class="w-3 h-3 mr-1.5"></i> Journal Article
                         </span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug">
+                    <h3 class="text-xl font-bold text-stone-900 mb-4 leading-snug group-hover:text-primary-600 transition-colors">
                         The Cost of Conformity: Emotional Wellbeing Mediates the Link Between Masculine Norms and Mental Health in North Indian Men
                     </h3>
-                    
-                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 mb-4 font-mono leading-relaxed">
-                    </div>
-
-                    <div class="mt-auto pt-2">
-                        <a href="https://ijip.in/articles/conformity-to-masculine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 group">
+                    <div class="mt-auto pt-8">
+                        <a href="https://ijip.in/articles/conformity-to-masculine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                             View Article 
-                            <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                            <i data-lucide="external-link" class="w-4 h-4 ml-1.5"></i>
                         </a>
                     </div>
                 </article>
@@ -183,76 +221,77 @@
     </section>
 
     <!-- Contact & Booking Section -->
-    <section id="contact" class="py-20 bg-slate-900 text-white relative">
-        <!-- Background decoration -->
+    <section id="contact" class="py-24 bg-[#2b352d] text-white relative overflow-hidden">
+        <!-- Aesthetic background curves -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-900 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
-            <div class="absolute bottom-0 left-10 w-72 h-72 bg-teal-900 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+            <div class="absolute -top-32 -right-32 w-[40rem] h-[40rem] bg-primary-800 rounded-full mix-blend-screen filter blur-[100px] opacity-40"></div>
+            <div class="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-[#3f4f42] rounded-full mix-blend-screen filter blur-[80px] opacity-50"></div>
         </div>
 
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-4">Book a Consultation</h2>
-                <p class="text-lg text-slate-300 mb-6">
-                    Fill out the form below to request an appointment. This will format a secure email to <span class="text-primary-300 font-medium">tamanaajaz7@gmail.com</span> with your preferred time.
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Begin Your Journey</h2>
+                <p class="text-lg text-primary-100 mb-8 font-light max-w-xl mx-auto">
+                    Fill out the form below to request an appointment. This will format a secure email to <span class="text-white font-medium">tamanaajaz7@gmail.com</span>.
                 </p>
-                <div class="inline-flex items-center bg-primary-900 border border-primary-500/50 rounded-full px-5 py-2 shadow-lg">
+                <div class="inline-flex items-center bg-primary-800/50 border border-primary-500/30 rounded-full px-6 py-2.5 backdrop-blur-sm">
                     <i data-lucide="info" class="w-4 h-4 text-primary-200 mr-2"></i>
-                    <span class="font-medium text-primary-100 tracking-wide">Consultation Fee: ₹1,000 per hour</span>
+                    <span class="text-sm font-medium text-primary-100 tracking-wide uppercase">Consultation Fee: ₹1,000 / hr</span>
                 </div>
             </div>
             
-            <form id="bookingForm" class="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <form id="bookingForm" class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-white/10 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <!-- Name -->
                     <div class="md:col-span-2">
-                        <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
-                        <input type="text" id="name" required class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="Jane Doe">
+                        <label for="name" class="block text-sm font-medium text-primary-100 mb-2 tracking-wide">Full Name</label>
+                        <input type="text" id="name" required class="w-full bg-primary-900/40 border border-primary-700/50 rounded-xl px-4 py-3.5 text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all" placeholder="Jane Doe">
                     </div>
 
                     <!-- Date -->
                     <div>
-                        <label for="date" class="block text-sm font-medium text-slate-300 mb-2">Preferred Date</label>
-                        <input type="date" id="date" required class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                        <label for="date" class="block text-sm font-medium text-primary-100 mb-2 tracking-wide">Preferred Date</label>
+                        <input type="date" id="date" required class="w-full bg-primary-900/40 border border-primary-700/50 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all">
                     </div>
 
                     <!-- Time -->
                     <div>
-                        <label for="time" class="block text-sm font-medium text-slate-300 mb-2">Preferred Time</label>
-                        <input type="time" id="time" required class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                        <label for="time" class="block text-sm font-medium text-primary-100 mb-2 tracking-wide">Preferred Time</label>
+                        <input type="time" id="time" required class="w-full bg-primary-900/40 border border-primary-700/50 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all">
                     </div>
 
                     <!-- Brief Message -->
                     <div class="md:col-span-2">
-                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Brief reason for seeking consultation (Optional)</label>
-                        <textarea id="message" rows="3" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="I'd like to discuss..."></textarea>
+                        <label for="message" class="block text-sm font-medium text-primary-100 mb-2 tracking-wide">Brief reason for seeking consultation (Optional)</label>
+                        <textarea id="message" rows="3" class="w-full bg-primary-900/40 border border-primary-700/50 rounded-xl px-4 py-3.5 text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all resize-none" placeholder="I'd like to discuss..."></textarea>
                     </div>
                 </div>
 
                 <!-- Acknowledgment -->
-                <div class="mb-8 flex items-start">
-                    <div class="flex items-center h-5">
-                        <input id="fee-ack" type="checkbox" required class="w-4 h-4 border border-slate-600 rounded bg-slate-800 focus:ring-3 focus:ring-primary-500 accent-primary-500">
+                <div class="mb-10 flex items-start p-4 bg-primary-900/30 rounded-xl border border-primary-700/30">
+                    <div class="flex items-center h-5 mt-0.5">
+                        <input id="fee-ack" type="checkbox" required class="w-5 h-5 border border-primary-600 rounded bg-primary-800 focus:ring-2 focus:ring-primary-400 accent-primary-500 cursor-pointer">
                     </div>
-                    <label for="fee-ack" class="ml-2 text-sm font-medium text-slate-300">
-                        I acknowledge that the consultation fee is ₹1,000 per hour.
+                    <label for="fee-ack" class="ml-3 text-sm font-light text-primary-100 cursor-pointer leading-relaxed">
+                        I acknowledge that the consultation fee is <strong class="text-white font-semibold">₹1,000 per hour</strong>.
                     </label>
                 </div>
 
-                <button type="submit" class="w-full flex justify-center items-center px-6 py-4 border border-transparent text-lg font-medium rounded-xl text-slate-900 bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-primary-500 transition-colors shadow-lg">
-                    <i data-lucide="send" class="w-5 h-5 mr-2"></i> Prepare Email Request
+                <button type="submit" class="w-full flex justify-center items-center px-6 py-4 border border-transparent text-lg font-medium rounded-2xl text-stone-900 bg-[#FCFBF8] hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-900 focus:ring-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 group">
+                    <i data-lucide="send" class="w-5 h-5 mr-2 text-primary-600 group-hover:text-primary-700 transition-colors"></i> 
+                    Prepare Email Request
                 </button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 py-10 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-slate-400">
-            <div class="mb-4 md:mb-0">
+    <footer class="bg-[#1f2621] py-12 border-t border-primary-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-primary-200/60 text-sm font-light">
+            <div class="mb-6 md:mb-0">
                 <p>&copy; 2026 Tammana Ajaz Bhat. All rights reserved.</p>
             </div>
-            <div class="flex space-x-6">
+            <div class="flex space-x-8">
                 <a href="#about" class="hover:text-white transition-colors">About</a>
                 <a href="#research" class="hover:text-white transition-colors">Research</a>
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
@@ -267,7 +306,7 @@
 
         // Handle Form Submission to generate mailto link
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent page reload
+            e.preventDefault();
 
             // Get form values
             const name = document.getElementById('name').value.trim();
@@ -275,17 +314,17 @@
             const time = document.getElementById('time').value;
             const message = document.getElementById('message').value.trim();
 
-            // Format the Date to make it readable (e.g., from YYYY-MM-DD to standard locale)
+            // Format Date
             const dateObj = new Date(date);
             const formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-            // Format the Time (e.g., from 14:00 to 2:00 PM)
+            // Format Time
             const timeSplit = time.split(':');
             let hours = parseInt(timeSplit[0]);
             const minutes = timeSplit[1];
             const ampm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12;
-            hours = hours ? hours : 12; // the hour '0' should be '12'
+            hours = hours ? hours : 12; 
             const formattedTime = hours + ':' + minutes + ' ' + ampm;
 
             // Construct Email Content
@@ -308,12 +347,9 @@
 
             const body = encodeURIComponent(bodyText);
 
-            // Open the user's default mail client
+            // Open default mail client
             window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
         });
     </script>
 </body>
 </html>
-
-
-```
